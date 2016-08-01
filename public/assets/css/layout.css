@@ -1,0 +1,118 @@
+/* flexbox */
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+html, body, .root-container {
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.container, .container-fluid {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	margin: 0;
+}
+
+.container {
+	flex-flow: row wrap;
+	justify-content: space-around; /* space-between; */
+}
+
+.container-fluid, header, footer, main, .main, #main {
+	width: 100%;
+}
+
+.root-container {
+	min-height: 100%;
+	height: 100%;
+	min-height: 100vh;
+	flex-direction: column;
+	align-items: flex-start;
+	overflow: hidden;
+}
+
+.flex-item {
+	margin: auto;
+}
+
+header, footer, nav, aside, article {
+	display: block;
+}
+
+#header, .header, .main, #main, .nav, .aside, .footer, #footer {
+	margin: auto;
+	flex: 0 0 auto;
+}
+
+.main, #main {
+	flex: 1 0;
+}
+
+.footer, #footer {
+	align-self: flex-end;
+}
+
+/* tools */
+.mdl-list__item.tool-thumb {
+	cursor: pointer;
+}
+
+.mdl-list__item.tool-thumb:hover, .mdl-list__item--two-line:hover .mdl-list__item-primary-content .mdl-list__item-sub-title {
+	color: #000;
+}
+
+.mdl-list__item--two-line:hover .mdl-list__item-avatar, .mdl-list__item-avatar.material-icons {
+	background-color: #000;
+}
+
+/* mdl fixed layout fix */
+
+.mdl-layout {
+	overflow: hidden !important;
+}
+
+.mdl-dialog {
+	min-width: 240px;
+	width: 80% !important;
+	max-width: 1024px;
+}
+
+/* mdl tree-nav levels indent */
+
+.mdl-layout__drawer .mdl-navigation nav {
+	padding-left: 20px;
+}
+
+/* material icons variants */
+
+.material-icons.medium, .mdl-list__item-avatar.material-icons.medium {
+	font-size: 20px;
+}
+.material-icons.small, .mdl-list__item-avatar.material-icons.small {
+	font-size: 16px;
+}
+.material-icons.tiny, .mdl-list__item-avatar.material-icons.tiny {
+	font-size: 12px;
+}
+.mdl-list__item-avatar.material-icons.medium {
+	padding: 10px;
+}
+.mdl-list__item-avatar.material-icons.small {
+	padding: 12px;
+}
+.mdl-list__item-avatar.material-icons.tiny {
+	padding: 14px;
+}
+
+.material-icons.with-label {
+	margin-right: 8px;
+}
+
